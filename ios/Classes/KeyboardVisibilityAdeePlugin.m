@@ -6,11 +6,11 @@
 //  Copyright © 2018 The Chromium Authors. All rights reserved.
 //
 
-#import "KeyboardVisibilityPlugin.h"
+#import "KeyboardVisibilityAdeePlugin.h"
 
 @import CoreLocation;
 
-@interface FLTKeyboardVisibilityPlugin() <FlutterStreamHandler>
+@interface FLTKeyboardVisibilityAdeePlugin() <FlutterStreamHandler>
 
 @property (copy, nonatomic) FlutterEventSink flutterEventSink;
 @property (assign, nonatomic) BOOL flutterEventListening;
@@ -19,12 +19,12 @@
 @end
 
 
-@implementation FLTKeyboardVisibilityPlugin
+@implementation FLTKeyboardVisibilityAdeePlugin
 
 +(void) registerWithRegistrar:(NSObject<FlutterPluginRegistrar> *)registrar {
     FlutterEventChannel *stream = [FlutterEventChannel eventChannelWithName:@"github.com/adee42/flutter_keyboard_visibility" binaryMessenger:[registrar messenger]];
     
-    FLTKeyboardVisibilityPlugin *instance = [[FLTKeyboardVisibilityPlugin alloc] init];
+    FLTKeyboardVisibilityAdeePlugin *instance = [[FLTKeyboardVisibilityAdeePlugin alloc] init];
     [stream setStreamHandler:instance];
 }
 

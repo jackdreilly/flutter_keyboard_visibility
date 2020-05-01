@@ -6,12 +6,12 @@
 //  Copyright © 2018 The Chromium Authors. All rights reserved.
 //
 
-#ifndef KeyboardVisibilityPlugin_h
-#define KeyboardVisibilityPlugin_h
+#ifndef KeyboardVisibilityAdeePlugin_h
+#define KeyboardVisibilityAdeePlugin_h
 
 #import <Flutter/Flutter.h>
 
-@interface FLTKeyboardVisibilityPlugin : NSObject<FlutterPlugin>
+@interface FLTKeyboardVisibilityAdeePlugin : NSObject<FlutterPlugin>
 @end
 
 #endif /* CompassHandler_h */

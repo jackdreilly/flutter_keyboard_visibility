@@ -20,7 +20,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
 
-public class KeyboardVisibilityPlugin implements StreamHandler, Application.ActivityLifecycleCallbacks, ViewTreeObserver.OnGlobalLayoutListener {
+public class KeyboardVisibilityAdeePlugin implements StreamHandler, Application.ActivityLifecycleCallbacks, ViewTreeObserver.OnGlobalLayoutListener {
     private static final String STREAM_CHANNEL_NAME = "github.com/adee42/flutter_keyboard_visibility";
     View mainView = null;
     EventSink eventsSink;
@@ -28,7 +28,7 @@ public class KeyboardVisibilityPlugin implements StreamHandler, Application.Acti
     boolean isVisible;
 
 
-    KeyboardVisibilityPlugin(Registrar registrar) {
+    KeyboardVisibilityAdeePlugin(Registrar registrar) {
 		this.registrar = registrar;
         eventsSink = null;
     }
@@ -101,7 +101,7 @@ public class KeyboardVisibilityPlugin implements StreamHandler, Application.Acti
     public static void registerWith(Registrar registrar) {
 
         final EventChannel eventChannel = new EventChannel(registrar.messenger(), STREAM_CHANNEL_NAME);
-        KeyboardVisibilityPlugin instance = new KeyboardVisibilityPlugin(registrar);
+        KeyboardVisibilityAdeePlugin instance = new KeyboardVisibilityAdeePlugin(registrar);
         eventChannel.setStreamHandler(instance);
 
         registrar.activity().getApplication().registerActivityLifecycleCallbacks(instance);
